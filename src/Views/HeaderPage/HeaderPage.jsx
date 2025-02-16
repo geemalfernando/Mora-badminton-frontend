@@ -133,7 +133,7 @@ const HeaderPage = () => {
                     target="_blank"
                     className={`${styles["drop-down-item"]}`}
                   >
-                    Corporate Team
+                    Club Team
                   </a>
                 </MenuItem>
                 <MenuItem onClick={handleCloseRegister}>
@@ -170,6 +170,15 @@ const HeaderPage = () => {
                     className={`${styles["drop-down-item"]}`}
                   >
                     University Team
+                  </a>
+                </MenuItem>
+                <MenuItem onClick={handleCloseRegister}>
+                  <a
+                    href="https://forms.gle/FYbfNWxdFg8oj5UM9"
+                    target="_blank"
+                    className={`${styles["drop-down-item"]}`}
+                  >
+                    Invitational School
                   </a>
                 </MenuItem>
               </Menu>
