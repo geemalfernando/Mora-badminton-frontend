@@ -106,7 +106,7 @@ const AboutPage = () => {
           <div className={`${styles["past-section-col"]}`}>
             <img
               className={`${styles["past-section-img"]}`}
-              src={require("../../assests/images/2023.jpeg")}
+              src={require("../../assests/images/2023.jpg")}
               alt=""
             ></img>
             <h3>2023</h3>
