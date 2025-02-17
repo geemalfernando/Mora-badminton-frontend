@@ -66,22 +66,22 @@ function ContactUs() {
 
   const [captainMaleDetails, setCaptainMaleDetails] = useState([
     {
-      name: "Yasira Punsith",
+      name: "Tharindu Ambegoda",
       tag: "Captain",
-      phone: "+94 71 369 8543",
-      email: "yasirapunsith@gmail.com",
-      facebook: "https://www.facebook.com/profile.php?id=100006817725111&mibextid=ZbWKwL",
-      linkedin: "www.linkedin.com/in/yasira-punsith-839121266",
-      image: "captain-male.jpg",
+      phone: "+94 71 175 6702",
+      email: "tharinduambegoda2000@gmail.com",
+      facebook: "https://www.facebook.com/share/191F4mKy38/",
+      linkedin: "#",
+      image: "captain-male.png",
     },
     {
-      name: "Hevindu Tilakasena",
+      name: "Vinuga Jayawardana",
       tag: "Vice Captain",
-      phone: "+94 76 381 3084",
-      email: "hevinduharshana@gmail.com",
-      facebook: "https://www.facebook.com/dkhevindu.htilakasena?mibextid=JRoKGi",
-      linkedin: "https://www.linkedin.com/in/hevindu-tilakasena-8379b8202",
-      image: "viceCaptain-male.jpg",
+      phone: "+94 77 446 9602",
+      email: "vinugajayawardana@gmail.com",
+      facebook: "https://www.facebook.com/share/1EEUxVLAZn/?mibextid=wwXIfr",
+      linkedin: "https://www.linkedin.com/in/vinuga-jayawardana-698759241?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
+      image: "viceCaptain-male.png",
     },
   ]);
 
@@ -96,13 +96,13 @@ function ContactUs() {
       image: "captain-female.jpg",
     },
     {
-      name: "Hiruni Thathsarani",
+      name: "Kavindi Patabendige",
       tag: "Vice Captain",
-      phone: "+94 70 386 7270",
-      email: "#",
-      facebook: "#",
-      linkedin: "#",
-      image: "viceCaptain-female.jpg",
+      phone: "+94 76 060 8150",
+      email: "kavindipatabendige2002@gmail.com",
+      facebook: "https://www.facebook.com/share/1EEfDwc8zF/",
+      linkedin: "https://www.linkedin.com/in/kavindi-patabendige-650b49235?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+      image: "viceCaptain-female.png",
     },
   ]);
 
