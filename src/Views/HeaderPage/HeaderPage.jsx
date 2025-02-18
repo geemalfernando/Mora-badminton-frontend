@@ -230,7 +230,7 @@ const HeaderPage = () => {
 
                 <MenuItem onClick={handleClose}>
                   <a
-                    href="https://drive.google.com/file/d/1ArnLLGwQ3P9kwuXC1heatjdyIksoWGAz/view?usp=drive_link"
+                    href="https://drive.google.com/file/d/12BMLPFdr6t32C5lU0P3JNrfoN7ppnuvH/view?usp=sharing"
                     target="_blank"
                     className={`${styles["drop-down-item"]}`}
                   >
@@ -239,7 +239,7 @@ const HeaderPage = () => {
                 </MenuItem>
                 <MenuItem onClick={handleClose}>
                   <a
-                    href="https://drive.google.com/file/d/1Chbl3cAeLobckwgvxZsn6NCFPStbTSxx/view?usp=drive_link"
+                    href="https://drive.google.com/file/d/1GBLJh2jr_H0hWhU_8xa0Diw7DbV2hyWY/view?usp=sharing"
                     target="_blank"
                     className={`${styles["drop-down-item"]}`}
                   >
@@ -248,7 +248,7 @@ const HeaderPage = () => {
                 </MenuItem>
                 <MenuItem onClick={handleCloseRegister}>
                   <a
-                    href="https://drive.google.com/file/d/1Bdv39X_VhrOB_WWgX5QQoeaS3aKig1xD/view?usp=drive_link"
+                    href="https://drive.google.com/file/d/1euXZR4c20HT0XA5zYAL1lJB6BcAOY8qB/view?usp=sharing"
                     target="_blank"
                     className={`${styles["drop-down-item"]}`}
                   >
@@ -257,7 +257,7 @@ const HeaderPage = () => {
                 </MenuItem>
                 <MenuItem onClick={handleClose}>
                   <a
-                    href="https://drive.google.com/file/d/15DYc-2P1YfxLgqvAlb24KD7fOwHE2gU3/view?usp=drive_link"
+                    href="https://drive.google.com/file/d/1khTjFuZb0eP_zxHPJi5QqGXrIwYNFuec/view?usp=sharing"
                     target="_blank"
                     className={`${styles["drop-down-item"]}`}
                   >
@@ -266,7 +266,7 @@ const HeaderPage = () => {
                 </MenuItem>
                 <MenuItem onClick={handleClose}>
                   <a
-                    href="https://drive.google.com/file/d/1HLjogbzNVkNBwzOy6lojNoD3FdvdWhjU/view?usp=sharing"
+                    href="https://drive.google.com/file/d/1GzkrIxWi0_IOq3TmmBZwKpKWdKG1FDHP/view?usp=sharing"
                     target="_blank"
                     className={`${styles["drop-down-item"]}`}
                   >
@@ -275,20 +275,11 @@ const HeaderPage = () => {
                 </MenuItem>
                 <MenuItem onClick={handleClose}>
                   <a
-                    href="https://drive.google.com/file/d/1rib_sQQbHAtGlFZDYSSX5xznibua_u7l/view?usp=drive_link"
+                    href="https://drive.google.com/file/d/1uGdJ6-QKWXixGgf_--rVozOZkg_niqjx/view?usp=sharing"
                     target="_blank"
                     className={`${styles["drop-down-item"]}`}
                   >
                     University Team
-                  </a>
-                </MenuItem>
-                <MenuItem onClick={handleClose}>
-                  <a
-                    href="https://drive.google.com/file/d/1rib_sQQbHAtGlFZDYSSX5xznibua_u7l/view?usp=drive_link"
-                    target="_blank"
-                    className={`${styles["drop-down-item"]}`}
-                  >
-                    Invitational School
                   </a>
                 </MenuItem>
               </Menu>
