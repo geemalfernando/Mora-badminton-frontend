@@ -3,10 +3,11 @@ import './timeline.css';
 import HeaderPage from "../HeaderPage/HeaderPage";
 import SCl from '../../assests/images/timeline/SCL.jpeg';
 import AGE from '../../assests/images/timeline/Age.jpeg'
-import Club from '../../assests/images/timeline/ClubEvent.jpeg';
+import Club from '../../assests/images/timeline/Club.jpg';
 import University from '../../assests/images/timeline/university.jpeg';
 import Novice from '../../assests/images/timeline/novices.jpeg';
 import Staff from '../../assests/images/timeline/stff.jpeg'
+import Footer from '../HomePage/Footer/footer'
 
 const TimelineData = [
   {
@@ -86,6 +87,7 @@ const CompanyTimeline = () => {
         ))}
       </div>
     </div>
+    <Footer></Footer>
     </div >
   );
 };

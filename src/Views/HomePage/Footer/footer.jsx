@@ -10,7 +10,7 @@ function Footer() {
           <img src={require("../../../assests/images/umisf_logo.png")} />
           <div className={`${styles["quick-tabs"]}`}>
             <a href="/">Home</a>|<a href="/about">About</a>|
-            <a href="/Timeline">Draws</a><br />
+            <a href="/draws">Draws</a><br />
             <a href="/photos">Gallery</a>|
             <a href="/contact-us">Contact Us</a>
           </div>
