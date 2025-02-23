@@ -576,8 +576,8 @@ const HeaderPage = () => {
           {/* <a href="/draws" className={`${styles["minNavLink"]}`}>
             <li className={`${styles["navBarItem"]}`}>Draws and Entries</li>
           </a> */}
-          <a href="/photos" className={`${styles["minNavLink"]}`}>
-            <li className={`${styles["navBarItem"]}`}>Gallery</li>
+          <a href="/Timeline" className={`${styles["minNavLink"]}`}>
+            <li className={`${styles["navBarItem"]}`}>Events</li>
           </a>
           {/* <a href="/developers" className={`${styles["minNavLink"]}`}>
             <li className={`${styles["navBarItem"]}`}>Developers</li>
