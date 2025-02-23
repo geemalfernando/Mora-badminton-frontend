@@ -59,6 +59,7 @@ import AdminPlayerEditPage from "../Views/AdminPlayerEditPage/AdminPlayerEditPag
 import AdminMessagesPage from "../Views/AdminMessages/AdminMessages";
 import AdminUniversityPlayerView from "../Views/AdminUniversityViewPlayer/AdminUniversityViewPlayer";
 import AdminCompanyPlayerView from "../Views/AdminCompanyViewPlayer/AdminCompanyViewPlayer";
+import Timeline from '../Views/TimelinePage/timeline';
 
 export default function AppRouter() {
   let type = localStorage.getItem('role'); //todo: this should change according to the user
@@ -69,6 +70,7 @@ export default function AppRouter() {
           <Route exact path="/" element={<HomePage />} />
           <Route path="about" element={<AboutPage />} />
           <Route path="contact-us" element={<ContactUsPage />} />
+          <Route path="Timeline" element={<Timeline/>}/>
           {/* <Route path="register">
             <Route path="player" element={<PlayerRegistration />} />
             <Route path="player/:id" element={<SuccessMessage />} />
