@@ -3,30 +3,29 @@ import styles from "./header.module.css";
 import HeaderPage from "../../HeaderPage/HeaderPage";
 import image from "../../../assests/images/gallery/1.jpg"
 import image2 from "../../../assests/images/gallery/6.jpg"
-import image3 from "../../../assests/images/gallery/3.jpg";
+
 import image4 from "../../../assests/images/gallery/4.jpg";
-import image5 from "../../../assests/images/gallery/T-1.jpg";
+
 import image6 from "../../../assests/images/gallery/T-2.jpg";
 import image7 from "../../../assests/images/gallery/T-3.jpg";
+import image8 from "../../../assests/images/gallery/T-5.jpg";
+import { Opacity } from "@mui/icons-material";
 
 
 // Import your background images (replace with your actual image paths)
 const backgroundImages = [
-  
   image,
   image2,
-  image3,
   image4,
-  image5,
+  
   image6,
-  image7
-
-  
-  
+  image7,
+  image8
 ];
 
 const HomePage = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [isHovered, setIsHovered] = useState(false);
 
   useEffect(() => {
     // Automatically cycle through background images every 5 seconds
@@ -39,6 +38,47 @@ const HomePage = () => {
     // Cleanup interval on component unmount
     return () => clearInterval(intervalId);
   }, []);
+
+  // Button styles
+  const buttonStyles = {
+    padding: '5px 24px',
+    fontSize: '18px',
+    fontWeight: 'bold',
+    backgroundColor: isHovered ? '#ff6b00' : '#ff8800',
+    color: 'white',
+    border: 'none',
+    borderRadius: '8px',
+    cursor: 'pointer',
+    transition: 'all 0.3s ease',
+    boxShadow: isHovered ? '0 6px 12px rgba(0, 0, 0, 0.2)' : '0 4px 8px rgba(0, 0, 0, 0.1)',
+    transform: isHovered ? 'translateY(-2px)' : 'translateY(0)',
+    outline: 'none',
+    marginTop: '-7px',
+    letterSpacing: '1px',
+    marginBottom:'0px'
+    
+  };
+
+  // Container styles for the merchandise section
+  const merchandiseContainerStyle = {
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    backgroundColor: 'rgba(0, 0, 0, 0.7)',
+    padding: '0px 50px ',
+    borderRadius: '10px',
+    marginTop: '5px',
+    Opacity:'20px'
+    
+  };
+
+  // Text styles for the merchandise announcement
+  const merchandiseTextStyle = {
+    fontSize: '30px',
+    color: 'white',
+    marginBottom: '10px',
+    fontWeight: '500'
+  };
 
   return (
     <div className={styles.homeContainer}>
@@ -58,12 +98,29 @@ const HomePage = () => {
       <div className={styles.headerDiv}>
         <HeaderPage />
         <div className={styles.UMiSFContainer}>
+          
           <h1>UMiSF</h1>
           <p>
             University of Moratuwa<br/>
             International Shuttlers' Fest
           </p>
         </div>
+          <div style={merchandiseContainerStyle}>
+          <div style={merchandiseTextStyle}>UMiSF 2025 official merchandise</div>
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLSfIU264eXTtGNRB1oJIxO9q-7ayQbPTZUbcuR1HUPCCwSBBcA/viewform" target="blank">
+          <button 
+            style={buttonStyles}
+            onMouseEnter={() => setIsHovered(true)}
+            onMouseLeave={() => setIsHovered(false)}
+          
+            aria-label="Shop UMiSF 2025 merchandise"
+          >
+            
+            BUY NOW 
+          </button>
+          </a>
+        </div>
+      
       </div>
     </div>
   );
