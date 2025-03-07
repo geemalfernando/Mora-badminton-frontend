@@ -35,7 +35,7 @@
 
 @media screen and (max-width: 920px) {
   .team-container{
-    background-image: url('../../../assests/images/team-image.jpeg');
+    background-image: url('../../../assests/images/team-image-new.jpeg');
     background-attachment: fixed;
     background-size: contain;
     background-repeat: no-repeat;

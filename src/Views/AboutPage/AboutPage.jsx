@@ -124,19 +124,12 @@ const AboutPage = () => {
       <section className={`${styles["testimonials"]}`}>
         <h1>Messages From The Organizing Committee</h1>
         <p>
-          Badminton has always been a popular sport among the undergraduate
-          community of our university. Since the inauguration of this annual
-          tournament in 2007, we have expanded our horizons. It was indeed a
-          success for us to reach the 1000 plus mark in the number of
-          participants. UMiSF is a great platform to show out the potential of
-          youngsters, university students, university staff members, as well as
-          corporates. We wish the participants the best of luck for the
-          tournament and hope everyone will enjoy it.
+          Badminton has always been a popular sport among the undergraduate community of our university. Since the inauguration of this annual tournament in 2007, we have expanded our horizons. It was indeed a success for us to reach the 1000 plus mark in the number of participants. UMiSF is a great platform to showcase the potential of youngsters, university students, and staff members, and with the latest updates on the Open Club Event and School Team Event, it is expanding more than ever before.We wish the participants the best of luck for the tournament and hope everyone will enjoy it.
         </p>
         <div className={`${styles["row"]}`}>
           <div className={`${styles["testimanial-col"]}`}>
             <img
-              src={require("../../assests/images/captain-male.jpg")}
+              src={require("../../assests/images/captain-male.png")}
               alt=""
             ></img>
             <div className={`${styles["testimanial-col-content"]}`}>
@@ -174,7 +167,7 @@ const AboutPage = () => {
         <div className={`${styles["row"]}`}>
           <div className={`${styles["testimanial-col"]}`}>
             <img
-              src={require("../../assests/images/viceCaptain-male.jpg")}
+              src={require("../../assests/images/viceCaptain-male.png")}
               alt=""
             ></img>
             <div className={`${styles["testimanial-col-content"]}`}>
@@ -187,7 +180,7 @@ const AboutPage = () => {
           </div>
           <div className={`${styles["testimanial-col"]}`}>
             <img
-              src={require("../../assests/images/viceCaptain-female.jpg")}
+              src={require("../../assests/images/viceCaptain-female.png")}
               alt=""
             ></img>
             <div className={`${styles["testimanial-col-content"]}`}>
