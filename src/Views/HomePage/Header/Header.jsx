@@ -66,11 +66,11 @@ const HomePage = () => {
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
-    backgroundColor: 'rgba(0, 0, 0, 0.7)',
+    backgroundColor: 'rgba(0, 0, 0, 0.4)',
     paddingBottom: '20px',
     borderRadius: '10px',
     marginTop: '5px',
-    Opacity:'20px',
+   
     
     
   };
