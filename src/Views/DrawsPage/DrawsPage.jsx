@@ -95,7 +95,7 @@ const DrawsPage = () => {
     {
       name: "Age Group",
       entriess: 0,
-      // pdf: "https://docs.google.com/spreadsheets/d/14ru7ELe31xdZ7sx92n8bOaJ92DW_wcuW9ef2TeGcO0Q/edit?usp=sharing",
+      pdf: "https://docs.google.com/spreadsheets/d/1ojmjVxOQR2izjtRrwE94sGIjKCMOJU2jTjnHC3nqS4I/edit?usp=sharing",
       pdf: "#",
     },
     {
@@ -117,7 +117,7 @@ const DrawsPage = () => {
     {
       name: "Novices",
       entriess: 0,
-      // pdf: "https://docs.google.com/spreadsheets/d/1ARfU-V5DV52QVro1kfBpxWC04kdtWAtzyOEUGRKY6g4/edit?usp=sharing",
+      pdf: "https://docs.google.com/spreadsheets/d/1bNSkUrblVyN97H75axH2QgqZttF8heRP/edit?usp=sharing&ouid=108516483365954862566&rtpof=true&sd=true",
       pdf: "#",
     },
     {
