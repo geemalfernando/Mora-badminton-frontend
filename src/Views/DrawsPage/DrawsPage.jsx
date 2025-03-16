@@ -102,7 +102,7 @@ const DrawsPage = () => {
       name: "University Individual",
       entriess: 0,
       //pdf: "https://docs.google.com/spreadsheets/d/1ajskluZjY3TTH-KYxI5pSDSWIncoZEizvzby0MbkYk0/edit?usp=sharing",
-      pdf: "#",
+      pdf: "https://docs.google.com/spreadsheets/d/1ZTov6tF-7uVCN9vmbGCf9O0zrCi54N4Uxw2ZGKFWFi8/edit?usp=sharing",
     },
     {
       name: "University Staff",
