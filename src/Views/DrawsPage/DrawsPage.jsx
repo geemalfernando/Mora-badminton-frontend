@@ -177,10 +177,10 @@ const DrawsPage = () => {
       <div className={`${styles["draws-entries--container"]}`}>
         <div className={`${styles["tournament-schedule"]}`}>
           <img src={require("../../assests/images/point.png")} />
-          {"Kindly refer to the enclosed "}
-          <a href="#" target="_blank">
+          {"Kindly refer to the draws "}
+{/*           <a href="#" target="_blank">
             Tournament Schedule
-          </a>
+          </a> */}
           {" for your perusal."}
           <p>
             Location : New Gymnasium University of Moratuwa - Katubedda &
