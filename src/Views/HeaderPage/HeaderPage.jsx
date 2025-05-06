@@ -230,7 +230,7 @@ const HeaderPage = () => {
 
                 <MenuItem onClick={handleClose}>
                   <a
-                    href="https://drive.google.com/file/d/12BMLPFdr6t32C5lU0P3JNrfoN7ppnuvH/view?usp=sharing"
+                    href="#"
                     target="_blank"
                     className={`${styles["drop-down-item"]}`}
                   >
@@ -239,7 +239,7 @@ const HeaderPage = () => {
                 </MenuItem>
                 <MenuItem onClick={handleClose}>
                   <a
-                    href="https://drive.google.com/file/d/1GBLJh2jr_H0hWhU_8xa0Diw7DbV2hyWY/view?usp=sharing"
+                    href="#"
                     target="_blank"
                     className={`${styles["drop-down-item"]}`}
                   >
@@ -248,7 +248,7 @@ const HeaderPage = () => {
                 </MenuItem>
                 <MenuItem onClick={handleCloseRegister}>
                   <a
-                    href="https://drive.google.com/file/d/1euXZR4c20HT0XA5zYAL1lJB6BcAOY8qB/view?usp=sharing"
+                    href="#"
                     target="_blank"
                     className={`${styles["drop-down-item"]}`}
                   >
@@ -257,7 +257,7 @@ const HeaderPage = () => {
                 </MenuItem>
                 <MenuItem onClick={handleClose}>
                   <a
-                    href="https://drive.google.com/file/d/1khTjFuZb0eP_zxHPJi5QqGXrIwYNFuec/view?usp=sharing"
+                    href="#"
                     target="_blank"
                     className={`${styles["drop-down-item"]}`}
                   >
@@ -266,7 +266,7 @@ const HeaderPage = () => {
                 </MenuItem>
                 <MenuItem onClick={handleClose}>
                   <a
-                    href="https://drive.google.com/file/d/1GzkrIxWi0_IOq3TmmBZwKpKWdKG1FDHP/view?usp=sharing"
+                    href="#"
                     target="_blank"
                     className={`${styles["drop-down-item"]}`}
                   >
@@ -275,7 +275,7 @@ const HeaderPage = () => {
                 </MenuItem>
                 <MenuItem onClick={handleClose}>
                   <a
-                    href="https://drive.google.com/file/d/1uGdJ6-QKWXixGgf_--rVozOZkg_niqjx/view?usp=sharing"
+                    href="#"
                     target="_blank"
                     className={`${styles["drop-down-item"]}`}
                   >
@@ -509,7 +509,7 @@ const HeaderPage = () => {
 
               <MenuItem onClick={handleCloseMobile}>
                 <a
-                  href="https://drive.google.com/file/d/12BMLPFdr6t32C5lU0P3JNrfoN7ppnuvH/view?usp=sharing"
+                  href="#"
                   target="_blank"
                   className={`${styles["drop-down-item-mobile"]}`}
                 >
@@ -518,7 +518,7 @@ const HeaderPage = () => {
               </MenuItem>
               <MenuItem onClick={handleCloseMobile}>
                 <a
-                  href="https://drive.google.com/file/d/1GBLJh2jr_H0hWhU_8xa0Diw7DbV2hyWY/view?usp=sharing"
+                  href="#"
                   target="_blank"
                   className={`${styles["drop-down-item-mobile"]}`}
                 >
@@ -527,7 +527,7 @@ const HeaderPage = () => {
               </MenuItem>
               <MenuItem onClick={handleCloseRegister}>
                 <a
-                  href="https://drive.google.com/file/d/1euXZR4c20HT0XA5zYAL1lJB6BcAOY8qB/view?usp=sharing"
+                  href="#"
                   target="_blank"
                   className={`${styles["drop-down-item-mobile"]}`}
                 >
@@ -536,7 +536,7 @@ const HeaderPage = () => {
               </MenuItem>
               <MenuItem onClick={handleCloseMobile}>
                 <a
-                  href="https://drive.google.com/file/d/1khTjFuZb0eP_zxHPJi5QqGXrIwYNFuec/view?usp=sharing"
+                  href="#"
                   target="_blank"
                   className={`${styles["drop-down-item-mobile"]}`}
                 >
@@ -545,7 +545,7 @@ const HeaderPage = () => {
               </MenuItem>
               <MenuItem onClick={handleCloseMobile}>
                 <a
-                  href="https://drive.google.com/file/d/1GzkrIxWi0_IOq3TmmBZwKpKWdKG1FDHP/view?usp=sharing"
+                  href="#"
                   target="_blank"
                   className={`${styles["drop-down-item-mobile"]}`}
                 >
@@ -554,7 +554,7 @@ const HeaderPage = () => {
               </MenuItem>
               <MenuItem onClick={handleCloseMobile}>
                 <a
-                  href="https://drive.google.com/file/d/1uGdJ6-QKWXixGgf_--rVozOZkg_niqjx/view?usp=sharing"
+                  href="#"
                   target="_blank"
                   className={`${styles["drop-down-item-mobile"]}`}
                 >
