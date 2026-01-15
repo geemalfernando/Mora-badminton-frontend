@@ -75,7 +75,7 @@ const AboutPage = () => {
           <p
             style={{
               display: "inline-block",
-              color: "#0984E3",
+              color: "#D9048E",
               fontFamily: "Hind",
             }}
           >
