@@ -103,10 +103,7 @@ const HomePage = () => {
         <div className={styles.UMiSFContainer}>
           
           <h1>UMiSF</h1>
-          <p>
-            University of Moratuwa<br/>
-            International Shuttlers' Fest
-          </p>
+  
         </div>
           <div style={merchandiseContainerStyle}>
           <div style={merchandiseTextStyle}>UMiSF 2025 official merchandise</div>
