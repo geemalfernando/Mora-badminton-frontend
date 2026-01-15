@@ -106,7 +106,7 @@ const HomePage = () => {
   
         </div>
           <div style={merchandiseContainerStyle}>
-          <div style={merchandiseTextStyle}>UMiSF 2025 official merchandise</div>
+          <div style={merchandiseTextStyle}>UMiSF 2026 official merchandise</div>
           <a href="https://docs.google.com/forms/d/e/1FAIpQLSfIU264eXTtGNRB1oJIxO9q-7ayQbPTZUbcuR1HUPCCwSBBcA/viewform" style={buttonURl} target="blank">
           <button 
             style={buttonStyles}
