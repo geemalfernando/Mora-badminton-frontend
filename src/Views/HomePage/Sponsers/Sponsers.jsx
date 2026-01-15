@@ -6,10 +6,9 @@ const Sponsers = (props) => {
 
   return (
     <div className={`${styles["sponsers"]}`}>
-        <p>EVENT SPONSORED BY</p>
+        
       {sponsers.map((sponser, index) => (
         <div className={`${styles["sponser"]}`}>
-          <img src={require(`../../../assests/images/sponsers/${sponser}`)} alt=""></img>
         </div>
       ))}
     </div>
