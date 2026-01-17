@@ -161,7 +161,19 @@ const SingleRegistration = () => {
     setValidated(true);
     single.pastPerformance = pastPerformanceArray;
 
-    if ((Object.values(single).includes("") && single.paymentMethod == "On-site" && single.paymentSlip == "") || !Object.values(single).includes("")) {
+    const ready =
+      single.player &&
+      single.ageGroup &&
+      single.paymentMethod &&
+      (single.paymentMethod !== "Bank Transfer" || Boolean(single.paymentSlip));
+
+    if (single.paymentMethod === "Bank Transfer" && !single.paymentSlip) {
+      message.error("Please upload your payment slip PDF.");
+      e.stopPropagation();
+      return;
+    }
+
+    if (ready) {
       api
         .get("/player/getByObjectId", { params: { ids: single.player } })
         .then(async (res) => {

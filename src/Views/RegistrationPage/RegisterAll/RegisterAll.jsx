@@ -393,12 +393,36 @@ const RegisterAll = () => {
     single.pastPerformance = singlePerf;
     double.pastPerformance = doublePerf;
 
+    const singleReady =
+      isPlayingSingle &&
+      single.player &&
+      single.ageGroup &&
+      single.ageGroup !== "Select Age Group" &&
+      single.paymentMethod &&
+      (single.paymentMethod !== "Bank Transfer" || Boolean(single.paymentSlip));
+
+    const doubleReady =
+      isPlayingDouble &&
+      double.player &&
+      double.playerPartner &&
+      double.ageGroup &&
+      double.ageGroup !== "Select Age Group" &&
+      double.paymentMethod &&
+      (double.paymentMethod !== "Bank Transfer" || Boolean(double.paymentSlip));
+
+    if (isPlayingSingle && single.paymentMethod === "Bank Transfer" && !single.paymentSlip) {
+      message.error("Please upload your payment slip PDF.");
+      e.stopPropagation();
+      return;
+    }
+    if (isPlayingDouble && double.paymentMethod === "Bank Transfer" && !double.paymentSlip) {
+      message.error("Please upload your payment slip PDF.");
+      e.stopPropagation();
+      return;
+    }
+
     if (
-      ((isPlayingSingle &&
-        Object.values(single).includes("") &&
-        single.paymentMethod == "On-site" &&
-        single.paymentSlip == "") ||
-        !Object.values(single).includes("")) &&
+      singleReady &&
       !perfError
     ) {
       try {
@@ -424,11 +448,7 @@ const RegisterAll = () => {
     }
 
     if (
-      ((isPlayingDouble &&
-        Object.values(double).includes("") &&
-        double.paymentMethod == "On-site" &&
-        double.paymentSlip == "") ||
-        !Object.values(double).includes("")) &&
+      doubleReady &&
       !perfError
     ) {
       api
