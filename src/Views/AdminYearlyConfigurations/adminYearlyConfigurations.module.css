@@ -6,14 +6,14 @@
 }
 
 .main-title {
-  background: white;
+  background: var(--admin-surface);
   margin: 10px 10vw;
   padding: 8px 13px;
 }
 
 .team-photo-container {
-  background: white;
-  color: black;
+  background: var(--admin-surface);
+  color: var(--admin-text);
   margin: 60px 10vw;
   padding: 2vw;
   margin-bottom: 2vw;
@@ -76,8 +76,8 @@
 
 /* team captain */
 .team-captains-container {
-  background: white;
-  color: black;
+  background: var(--admin-surface);
+  color: var(--admin-text);
   margin: 60px 10vw;
   padding: 2vw;
   margin-bottom: 2vw;

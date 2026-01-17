@@ -6,7 +6,7 @@
   }
   
   .main-title {
-    background: white;
+    background: var(--admin-surface);
     margin: 10px 10vw;
     padding: 8px 13px;
     font-family: "Hind";
@@ -29,7 +29,7 @@
   }
   
   .tool-bar {
-    background: white;
+    background: var(--admin-surface);
     color: #0c0744;
     margin: 20px 10vw;
     padding: 8px 13px;
@@ -44,7 +44,7 @@
     margin-right: 63px;
     font-family: "Hind";
     font-size: 16px;
-    color: black;
+    color: var(--admin-text);
   }
   .tool-bar img {
     width: 20px;
@@ -52,8 +52,8 @@
   }
   
   .folder-container {
-    background: white;
-    color: black;
+    background: var(--admin-surface);
+    color: var(--admin-text);
     margin: 60px 10vw;
     padding: 2.3vw;
     margin-bottom: 0;
@@ -75,7 +75,7 @@
     font-family: "Hind";
     display: inline-block;
     width: 15%;
-    color: black;
+    color: var(--admin-text);
     padding-bottom: 13px;
     text-align: center;
   }

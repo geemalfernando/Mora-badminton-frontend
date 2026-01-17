@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import styles from "./profileNavbar.module.css";
+import { Link } from "react-router-dom";
 
 const ProfileNavbar = (props) => {
   const loadSideBar = () => {
@@ -88,8 +89,9 @@ const ProfileNavbar = (props) => {
   ];
 
   useEffect(() => {
-    let id = "#" + props.page;
-    document.querySelector(id).style.background = "white";
+    const activeId = "#" + props.page;
+    const active = document.querySelector(activeId);
+    if (active) active.classList.add(styles.activeLink);
   }, []);
 
   return (
@@ -98,8 +100,8 @@ const ProfileNavbar = (props) => {
         <div className={`${styles["navbar-sections"]}`}>
           {navLinksSectionOne.map((navLink, index) => (
             <li className={`${styles["navbar-item"]}`} key={index}>
-              <a
-                href={`/admin/${navLink.link}`}
+              <Link
+                to={`/admin/${navLink.link}`}
                 className={`${styles["navbar-item-link"]}`}
                 id={navLink.id}
               >
@@ -108,15 +110,15 @@ const ProfileNavbar = (props) => {
                   alt=""
                 />{" "}
                 {navLink.title}
-              </a>
+              </Link>
             </li>
           ))}
         </div>
         <div className={`${styles["navbar-sections"]}`}>
           {navLinksSectionTwo.map((navLink, index) => (
             <li className={`${styles["navbar-item"]}`} key={index}>
-              <a
-                href={`/admin/${navLink.link}`}
+              <Link
+                to={`/admin/${navLink.link}`}
                 className={`${styles["navbar-item-link"]}`}
                 id={navLink.id}
               >
@@ -125,7 +127,7 @@ const ProfileNavbar = (props) => {
                   alt=""
                 />{" "}
                 {navLink.title}
-              </a>
+              </Link>
             </li>
           ))}
         </div>
@@ -141,8 +143,8 @@ const ProfileNavbar = (props) => {
         <ul>
           {navLinksSectionOne.concat(navLinksSectionTwo).map((navLink, index) => (
             <li className={`${styles["navBarItem"]}`} key={index}>
-              <a
-                href={`/admin/${navLink.link}`}
+              <Link
+                to={`/admin/${navLink.link}`}
                 className={`${styles["navbar-item-link"]}`}
                 id={navLink.id}
               >
@@ -151,7 +153,7 @@ const ProfileNavbar = (props) => {
                   alt=""
                 />{" "}
                 {navLink.title}
-              </a>
+              </Link>
             </li>
           ))}
         </ul>

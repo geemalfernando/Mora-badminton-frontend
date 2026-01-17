@@ -4,9 +4,10 @@ import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
 import { indigo } from "@mui/material/colors";
 import IconButton from "@mui/material/IconButton";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const HeaderPage = () => {
+  const navigate = useNavigate();
   const [anchor, setAnchor] = useState(null);
   const [anchorMobile, setAnchorMobile] = useState(null);
   const [anchorEl, setAnchorEl] = useState(null);
@@ -19,10 +20,10 @@ const HeaderPage = () => {
     setAnchorEl(event.currentTarget);
   };
   const handleClickRegister = (event) => {
-    setAnchor(event.currentTarget);
+    navigate("/register/player");
   };
   const handleClickRegisterMobile = (event) => {
-    setAnchorMobile(event.currentTarget);
+    navigate("/register/player");
   };
   const handleClickMobile = (event) => {
     setAnchorElmobile(event.currentTarget);

@@ -22,7 +22,7 @@
   min-height: 100vh;
 }
 .main-title {
-  background: white;
+  background: var(--admin-surface);
   margin: 10px 10vw;
   padding: 8px 13px;
 }
@@ -87,7 +87,7 @@
   text-decoration: none;
   font-size: 16px;
   font-family: "Hind";
-  color: black;
+  color: var(--admin-text);
   flex: 1;
 }
 
@@ -106,8 +106,8 @@
 }
 
 .draws-container {
-  background: white;
-  color: black;
+  background: var(--admin-surface);
+  color: var(--admin-text);
   margin: 60px 10vw;
   padding: 2vw;
   margin-bottom: 0;

@@ -7,6 +7,72 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+/* Global theme */
+:root {
+  --admin-bg: #012326;
+  --admin-primary: #025373;
+  --admin-accent: #05F2DB;
+  --admin-pink: #D9048E;
+  --admin-magenta: #F205CB;
+  --admin-surface: rgba(2, 83, 115, 0.35);
+  --admin-surface-strong: rgba(2, 83, 115, 0.6);
+  --admin-border: rgba(5, 242, 219, 0.35);
+  --admin-text: #ffffff;
+}
+
+body {
+  background: var(--admin-bg);
+  color: var(--admin-text);
+}
+
+a {
+  color: var(--admin-accent);
+}
+
+/* Ant Design */
+.ant-btn-primary {
+  background: var(--admin-primary);
+  border-color: var(--admin-primary);
+}
+
+.ant-btn-primary:hover {
+  background: var(--admin-magenta);
+  border-color: var(--admin-magenta);
+}
+
+.ant-select-selector {
+  background: var(--admin-surface) !important;
+  border-color: var(--admin-border) !important;
+  color: var(--admin-text) !important;
+}
+
+.ant-select-arrow {
+  color: var(--admin-accent) !important;
+}
+
+.ant-input,
+.ant-input-affix-wrapper,
+.ant-picker,
+.ant-picker-input > input {
+  background: var(--admin-surface) !important;
+  border-color: var(--admin-border) !important;
+  color: var(--admin-text) !important;
+}
+
+.ant-modal-content {
+  background: var(--admin-bg) !important;
+  color: var(--admin-text) !important;
+}
+
+.ant-modal-header {
+  background: var(--admin-bg) !important;
+  border-bottom: 1px solid var(--admin-border) !important;
+}
+
+.ant-modal-title {
+  color: var(--admin-text) !important;
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;

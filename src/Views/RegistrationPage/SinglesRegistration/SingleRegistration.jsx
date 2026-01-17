@@ -9,7 +9,17 @@ import { api } from "../../../common/api";
 import { CheckCircleTwoTone, ExclamationCircleTwoTone, PlusCircleTwoTone, MinusCircleTwoTone } from "@ant-design/icons";
 import { Modal } from "antd";
 import { message } from "antd";
+import ImageUploader from "../Common/imageUploader/ImageUploader";
 const SingleRegistration = () => {
+  useEffect(() => {
+    const playerId = localStorage.getItem("playerId");
+    if (!playerId) {
+      message.warning(
+        "Please register as a player first. Use your Player ID for single/double registrations."
+      );
+    }
+  }, []);
+
   const [validated, setValidated] = useState(false); //form validation
   const [single, setSingle] = useState({
     player: "",
@@ -18,6 +28,9 @@ const SingleRegistration = () => {
     paymentMethod: "",
     paymentSlip: "",
   });
+
+  const [slipFileList, setSlipFileList] = useState([]);
+  const [, setSlipName] = useState(null);
 
   const [isBankTransfer, setIsBankTransfer] = useState(false);
   const [pastPerformanceArray, setPastPerformanceArray] = useState([
@@ -232,16 +245,22 @@ const SingleRegistration = () => {
               </MDBCol>
               {isBankTransfer && (
                 <MDBCol>
-                  <MDBInput
-                    wrapperClass="mb-4"
-                    label="Payment Slip"
-                    labelClass="text-white"
-                    name="paymentSlip"
-                    type="text"
-                    value={single.paymentSlip}
-                    onChange={handleChange}
-                    contrast
-                  />
+                  <div style={{ marginTop: "8px" }}>
+                    <div style={{ color: "white", fontFamily: "Hind", marginBottom: "6px" }}>
+                      Payment Slip (PDF)
+                    </div>
+                    <ImageUploader
+                      isfile={true}
+                      allowedTypes={["application/pdf"]}
+                      accept=".pdf"
+                      setImage={(dataUrl) =>
+                        setSingle((prev) => ({ ...prev, paymentSlip: dataUrl || "" }))
+                      }
+                      fileList={slipFileList}
+                      setFileList={setSlipFileList}
+                      setImageName={setSlipName}
+                    />
+                  </div>
                 </MDBCol>
               )}
             </div>

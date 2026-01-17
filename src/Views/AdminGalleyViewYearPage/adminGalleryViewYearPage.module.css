@@ -5,7 +5,7 @@
 }
 
 .main-title {
-  background: white;
+  background: var(--admin-surface);
   color: #0c0744;
   margin: 10px 10vw;
   padding: 8px 13px;
@@ -29,7 +29,7 @@
 }
 
 .tool-bar {
-  background: white;
+  background: var(--admin-surface);
   color: #0c0744;
   margin: 20px 10vw;
   padding: 8px 13px;
@@ -49,10 +49,10 @@
 
 .images-container {
   margin-top: 3vw;
-  color: black;
+  color: var(--admin-text);
   margin: 60px 10vw;
   margin-bottom: 0;
-  background: white;
+  background: var(--admin-surface);
   padding: 20px;
 }
 

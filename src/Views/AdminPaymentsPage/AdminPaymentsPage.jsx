@@ -5,6 +5,7 @@ import styles from './adminPaymentsPage.module.css';
 import { useState, useEffect } from 'react';
 import { CheckCircleTwoTone, CloseCircleTwoTone } from '@ant-design/icons';
 import { Select, Space, Button, message, Row, Col } from 'antd';
+import { getPaymentSlipHref } from '../../common/paymentSlip';
 
 import Axios from 'axios';
 
@@ -259,7 +260,15 @@ const AdminPaymentsPage = () => {
                   <div className={`${styles['table-row']}`}>{payment.paymentMethod}</div>
                   <div className={`${styles['table-row']}`}>
                     {payment.paymentSlip ? <img src={require('../../assests/images/pdf.png')} alt="" style={{ width: '15px', marginRight: '10px' }} /> : ' - '}
-                    {payment.paymentSlip}
+                    {(() => {
+                      const href = getPaymentSlipHref(payment.paymentSlip);
+                      if (!href) return payment.paymentSlip || '-';
+                      return (
+                        <a href={href} target="_blank" rel="noreferrer" download>
+                          View slip
+                        </a>
+                      );
+                    })()}
                   </div>
                   <div className={`${styles['table-row']}`}>{payment.paymentApprover}</div>
                   <div className={`${styles['table-row']}`} style={{ alignItems: 'center' }}>

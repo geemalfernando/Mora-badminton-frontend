@@ -16,19 +16,30 @@ const getSrcFromFile = (file) => {
 
 export default function ImageUploader(props){
   const [open, setOpen] = useState(false);
-  const {fileList, setFileList, setImage, setImageName, index,isfile} = props;
+  const {
+    fileList,
+    setFileList,
+    setImage,
+    setImageName,
+    index,
+    isfile,
+    allowedTypes,
+    accept,
+  } = props;
 
   async function setFileToBase(file){
-    setImageName(file.name);
+    setImageName?.(file.name);
 		const reader = new FileReader();
 		await reader.readAsDataURL(file);
-		reader.onloadend = () => (setImage(reader.result));
+		reader.onloadend = () => (setImage?.(reader.result));
 	}
 
   const onChange = ({ fileList: newFileList }) => {
     // console.log(newFileList[0].originFileObj.type);
     if(newFileList.length === 0 ){
       setFileList(newFileList);
+      setImage?.(null);
+      setImageName?.(null);
       return;
     }
 
@@ -37,7 +48,8 @@ export default function ImageUploader(props){
       return;
     }
 
-    if(['image/png','image/jpeg','application/pdf'].includes(newFileList[0].originFileObj.type)){
+    const allowed = Array.isArray(allowedTypes) && allowedTypes.length > 0 ? allowedTypes : ['image/png','image/jpeg','application/pdf'];
+    if(allowed.includes(newFileList[0].originFileObj.type)){
       setFileList(newFileList);
     }else{
       setOpen(true);
@@ -48,7 +60,8 @@ export default function ImageUploader(props){
   const beforeUpload = async (file) => {
     setFileToBase(file);
     if(isfile){
-      return file.type === 'image/png' || file.type === 'image/jpeg' || file.type === ' application/pdf';
+      const allowed = Array.isArray(allowedTypes) && allowedTypes.length > 0 ? allowedTypes : ['image/png','image/jpeg','application/pdf'];
+      return allowed.includes(file.type);
     }
     return true;
     
@@ -56,9 +69,11 @@ export default function ImageUploader(props){
 
   const onPreview = async (file) => {
     const src = file.url || (await getSrcFromFile(file));
+    const isPdf = (file?.type || file?.originFileObj?.type) === 'application/pdf' || String(src).startsWith('data:application/pdf');
     const imgWindow = window.open(src);
 
     if (imgWindow) {
+      if (isPdf) return;
       const image = new Image();
       image.src = src;
       imgWindow.document.write(image.outerHTML);
@@ -102,6 +117,7 @@ export default function ImageUploader(props){
             onChange={onChange}
             beforeUpload={beforeUpload}
             onPreview={onPreview}
+            accept={accept}
             
         >
                 {fileList.length  < 1  ? 
@@ -136,5 +152,3 @@ export default function ImageUploader(props){
     </Grid>
   );
 };
-
-

@@ -5,7 +5,7 @@
 }
 
 .main-title {
-  background: white;
+  background: var(--admin-surface);
   color: #0c0744;
   margin: 10px 10vw;
   padding: 8px 13px;
@@ -29,7 +29,7 @@
 }
 
 .tool-bar {
-  background: white;
+  background: var(--admin-surface);
   color: #0c0744;
   margin: 20px 10vw;
   padding: 8px 13px;
@@ -39,7 +39,7 @@
 }
 
 .add-players {
-  background: white;
+  background: var(--admin-surface);
   color: #0c0744;
   padding: 8px 13px;
   font-family: "Hind";
@@ -53,7 +53,7 @@
   margin-right: 63px;
   font-family: "Hind";
   font-size: 16px;
-  color: black;
+  color: var(--admin-text);
 }
 
 .add-players img {
@@ -67,7 +67,7 @@
   margin-right: 63px;
   font-family: "Hind";
   font-size: 16px;
-  color: black;
+  color: var(--admin-text);
 }
 
 .tool-bar button {
@@ -82,13 +82,13 @@
 
 .image-container {
   margin-top: 3vw;
-  color: black;
+  color: var(--admin-text);
   margin: 60px 10vw;
   padding: 2vw;
 }
 
 .users-container {
-  background: white;
+  background: var(--admin-surface);
   margin: 60px 10vw;
   padding: 20px;
   margin-bottom: 0;
@@ -135,7 +135,7 @@
   padding: 10px;
   display: block;
   text-decoration: none;
-  color: black;
+  color: var(--admin-text);
 }
 
 .users-name img {

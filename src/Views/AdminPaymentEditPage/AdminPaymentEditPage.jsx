@@ -5,6 +5,7 @@ import { Form, Input } from "reactstrap";
 import ProfileHeader from "../ProfileHeader/ProfileHeader";
 import AdminNavbar from '../AdminNavbar/AdminNavbar'
 import styles from "./adminPaymentEditPage.module.css";
+import { getPaymentSlipHref } from "../../common/paymentSlip";
 
 const AdminPaymentEditPage = (props) => {
   const location = useLocation();
@@ -92,9 +93,15 @@ const AdminPaymentEditPage = (props) => {
               <div className={`${styles["profile-field-container"]}`}>
                 <div className={`${styles["profile-field-name"]}`}>Payment Slip</div>
                 <div className={`${styles["profile-field-value"]}`}>
-                  <a href="" download className={`${styles["file-name"]}`}>
-                    {paymentDetails.paymentSlip}
-                  </a>
+                  {(() => {
+                    const href = getPaymentSlipHref(paymentDetails.paymentSlip);
+                    if (!href) return <span className={`${styles["file-name"]}`}>{paymentDetails.paymentSlip}</span>;
+                    return (
+                      <a href={href} target="_blank" rel="noreferrer" download className={`${styles["file-name"]}`}>
+                        View slip
+                      </a>
+                    );
+                  })()}
                   {/* give the ability to download the pdf, once clicked */}
                 </div>
               </div>

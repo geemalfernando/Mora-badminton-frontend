@@ -15,6 +15,15 @@ import ImageUploader from "../Common/imageUploader/ImageUploader";
 import { CircularProgress, Grid } from "@mui/material";
 
 const UniversityRegistration = () => {
+  useEffect(() => {
+    const playerId = localStorage.getItem("playerId");
+    if (!playerId) {
+      message.warning(
+        "Please register as a player first. Use your Player ID for single/double registrations."
+      );
+    }
+  }, []);
+
   const [isRegistrationsOpen, setIsRegistrationsOpen] = useState(true);
   const [validated, setValidated] = useState(false); //form validation
   const [university, setUniversity] = useState({
@@ -387,7 +396,15 @@ const UniversityRegistration = () => {
                   </MDBCol>
                   {isBankTransfer && (
                     <MDBCol className="mb-1" lg="6" md="6" sm="12">
-                      <ImageUploader isfile={true} setImage={setSlipImage} fileList={slipFile} setFileList={setSlipFile} setImageName={setSlipName} />
+                      <ImageUploader
+                        isfile={true}
+                        allowedTypes={["application/pdf"]}
+                        accept=".pdf"
+                        setImage={setSlipImage}
+                        fileList={slipFile}
+                        setFileList={setSlipFile}
+                        setImageName={setSlipName}
+                      />
                     </MDBCol>
                   )}
                 </div>

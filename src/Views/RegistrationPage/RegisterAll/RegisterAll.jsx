@@ -4,17 +4,25 @@ import HeaderPage from "../../HeaderPage/HeaderPage";
 import info from "../../../assests/images/info.gif";
 import { Form } from "react-bootstrap";
 import { MDBContainer, MDBInput, MDBCol, MDBRow } from "mdb-react-ui-kit";
-import { Button, Divider, Space, Tour } from "antd";
+import { Button, Divider, Space, Tour, Modal, message, Select } from "antd";
 import Switch from "@mui/material/Switch";
 import FormControlLabel from "@mui/material/FormControlLabel";
 import TableRow from "../Common/AddTablePerf/TableRow";
 import { api } from "../../../common/api";
 import { CheckCircleTwoTone, ExclamationCircleTwoTone } from "@ant-design/icons";
-import { Modal, message, Select } from "antd";
 import Dropdown from "../../../common/Dropdown/Dropdown";
 import RegistrationsNotOpen from "../../../common/registrationsNotOpen/RegistrationsNotOpen";
+import ImageUploader from "../Common/imageUploader/ImageUploader";
 
 const RegisterAll = () => {
+  useEffect(() => {
+    const playerId = localStorage.getItem("playerId");
+    if (!playerId) {
+      message.warning(
+        "Please register as a player first. Use your Player ID for single/double registrations."
+      );
+    }
+  }, []);
   const [isRegistrationsOpen, setIsRegistrationsOpen] = useState(true);
   const [validated, setValidated] = useState(false); //form validation
   const [single, setSingle] = useState({
@@ -50,6 +58,8 @@ const RegisterAll = () => {
     },
   ];
   const [isBankTransfer, setIsBankTransfer] = useState(false);
+  const [slipFileList, setSlipFileList] = useState([]);
+  const [, setSlipName] = useState(null);
   const [singlePastPerformanceArray, setSinglePastPerformanceArray] = useState([
     { name: "", level: "", place: "" },
     { name: "", level: "", place: "" },
@@ -219,18 +229,6 @@ const RegisterAll = () => {
     });
     console.log("isBankTransfer: ", value == "On-Site");
     value == "Bank Transfer" ? setIsBankTransfer(true) : setIsBankTransfer(false);
-  };
-
-  const changePaymentSlip = (e) => {
-    const value = e.target.value;
-
-    setSingle((prevValue) => {
-      return { ...prevValue, paymentSlip: value };
-    });
-
-    setDouble((prevValue) => {
-      return { ...prevValue, paymentSlip: value };
-    });
   };
 
   const changeSinglePastPerformanceArray = (option, id) => {
@@ -834,18 +832,24 @@ const RegisterAll = () => {
                     </MDBCol>
                     {isBankTransfer && (
                       <MDBCol className="" lg="6" md="6" sm="12">
-                        <MDBInput
-                          wrapperClass="mb-4"
-                          label="Payment Slip"
-                          labelStyle={{ color: "white", fontFamily: "Hind"}}
-                          className={`${Styles["mdbinput"]} bg-primary bg-opacity-25`}
-                          labelClass="text-white"
-                          name="paymentSlip"
-                          type="text"
-                          value={isPlayingSingle ? single.paymentSlip : double.paymentSlip}
-                          onChange={changePaymentSlip}
-                          contrast
-                        />
+                        <div style={{ marginTop: "8px" }}>
+                          <div style={{ color: "white", fontFamily: "Hind", marginBottom: "6px" }}>
+                            Payment Slip (PDF)
+                          </div>
+                          <ImageUploader
+                            isfile={true}
+                            allowedTypes={["application/pdf"]}
+                            accept=".pdf"
+                            setImage={(dataUrl) => {
+                              const slip = dataUrl || "";
+                              setSingle((prev) => ({ ...prev, paymentSlip: slip }));
+                              setDouble((prev) => ({ ...prev, paymentSlip: slip }));
+                            }}
+                            fileList={slipFileList}
+                            setFileList={setSlipFileList}
+                            setImageName={setSlipName}
+                          />
+                        </div>
                       </MDBCol>
                     )}
                   </div>

@@ -13,6 +13,15 @@ import { message } from "antd";
 import ImageUploader from "../Common/imageUploader/ImageUploader";
 import { CircularProgress, Grid, Typography } from "@mui/material";
 const CompanyRegistration = () => {
+  useEffect(() => {
+    const playerId = localStorage.getItem("playerId");
+    if (!playerId) {
+      message.warning(
+        "Please register as a player first. Use your Player ID for single/double registrations."
+      );
+    }
+  }, []);
+
   const [isRegistrationsOpen, setIsRegistrationsOpen] = useState(true);
   const [validated, setValidated] = useState(false); //form validation
   const [company, setCompany] = useState({
@@ -382,7 +391,15 @@ const CompanyRegistration = () => {
               </MDBCol>
               {isBankTransfer && (
                 <MDBCol className="mb-1" lg="6" md="6" sm="12">
-                  <ImageUploader isfile={true} setImage={setSlipImage} fileList={slipFile} setFileList={setSlipFile} setImageName={setSlipName} />
+                  <ImageUploader
+                    isfile={true}
+                    allowedTypes={["application/pdf"]}
+                    accept=".pdf"
+                    setImage={setSlipImage}
+                    fileList={slipFile}
+                    setFileList={setSlipFile}
+                    setImageName={setSlipName}
+                  />
                 </MDBCol>
               )}
             </div>

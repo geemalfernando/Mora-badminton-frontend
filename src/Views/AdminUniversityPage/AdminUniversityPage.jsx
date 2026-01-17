@@ -8,6 +8,7 @@ import { useLocation, Link, useNavigate } from 'react-router-dom';
 import Axios from 'axios';
 import { message } from 'antd';
 import defualtUser from '../../assests/images/default-user.png';
+import { getPaymentSlipHref } from '../../common/paymentSlip';
 
 
 const AdminUniversityPage = () => {
@@ -77,7 +78,17 @@ const AdminUniversityPage = () => {
 
         <div className={`${styles['profile-field-container']}`}>
           <div className={`${styles['profile-field-name']}`}>Payement slip</div>
-          <div className={`${styles['profile-field-value']}`}><a href={`../../assests/documents/payments/${university.paymentSlip}`} download>{university.paymentSlip}</a></div>
+          <div className={`${styles['profile-field-value']}`}>
+            {(() => {
+              const href = getPaymentSlipHref(university.paymentSlip);
+              if (!href) return university.paymentSlip;
+              return (
+                <a href={href} target="_blank" rel="noreferrer" download>
+                  View slip
+                </a>
+              );
+            })()}
+          </div>
         </div>
         <hr />
 

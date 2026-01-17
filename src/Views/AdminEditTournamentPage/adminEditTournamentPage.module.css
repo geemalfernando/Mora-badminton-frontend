@@ -6,7 +6,7 @@
 }
 
 .main-title {
-  background: white;
+  background: var(--admin-surface);
   margin: 10px 10vw;
   padding: 8px 13px;
   font-family: "Hind";
@@ -27,7 +27,7 @@
   margin: 30px 10vw;
   margin-bottom: 0;
   padding: 20pt;
-  background-color: white;
+  background-color: var(--admin-surface);
   border-radius: 10px;
   text-align: center;
 }
@@ -47,7 +47,7 @@
   flex-basis: 30%;
   font-family: "Hind";
   font-size: 16px;
-  color: black;
+  color: var(--admin-text);
 }
 
 .form-field-value {
@@ -55,7 +55,7 @@
   font-family: "Hind";
   font-weight: 100;
   font-size: 16px;
-  color: black;
+  color: var(--admin-text);
 }
 
 .form-input {
@@ -70,7 +70,7 @@
   font-family: "Hind";
   font-weight: 100;
   font-size: 16px;
-  color: black;
+  color: var(--admin-text);
   display: flex;
   flex-direction: row;
 }
@@ -113,7 +113,7 @@
 
 .selected-file a {
   text-decoration: none;
-  color: black;
+  color: var(--admin-text);
 }
 
 .selected-file img {

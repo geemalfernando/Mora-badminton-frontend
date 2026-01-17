@@ -13,6 +13,7 @@ import Dropdown from "../../../common/Dropdown/Dropdown";
 import SuccessMessage from "../Common/SuccessMessage/SuccessMessage";
 import RegistrationsNotOpen from "../../../common/registrationsNotOpen/RegistrationsNotOpen";
 import { useNavigate } from "react-router-dom";
+import { Select } from "antd";
 
 const PlayerRegistration = () => {
   const navigate = useNavigate()
@@ -39,6 +40,28 @@ const PlayerRegistration = () => {
   const genderOptions = ["Male", "Female"];
   const [gender, setGender] = useState("");
   const [imageName,setImageName] = useState();
+
+  const registrationOptions = useMemo(
+    () => [
+      { label: "Player Registration", value: "/register/player" },
+      { label: "Single / Double Registration", value: "/register/single-double" },
+      { label: "University Registration", value: "/register/university" },
+      { label: "Company Registration", value: "/register/company" },
+    ],
+    []
+  );
+
+  const handleRegistrationCategoryChange = (path) => {
+    if (path !== "/register/player") {
+      const playerId = localStorage.getItem("playerId");
+      if (!playerId) {
+        message.warning(
+          "Please note that first you have to register as a player through this portal before applying for single/double events. The Player ID given upon successful registration should be used for all the future events including upcoming years."
+        );
+      }
+    }
+    navigate(path);
+  };
 
   useEffect(() => {
     // openNotification('topRight')
@@ -120,6 +143,7 @@ const PlayerRegistration = () => {
           console.log(res.data);
           message.success(res.data.message);
           setPlayerID(res.data.data[0]["_id"]);
+          localStorage.setItem("playerId", res.data.data[0]["_id"]);
 
           
           if(image !== null){
@@ -155,6 +179,15 @@ const PlayerRegistration = () => {
           <div className={`${Styles["title"]}`}>Player Registration</div>
 
             <>
+              <div style={{ margin: "0 10vw 16px 10vw" }}>
+                <Select
+                  style={{ width: "100%" }}
+                  placeholder="Select registration category"
+                  value="/register/player"
+                  options={registrationOptions}
+                  onChange={handleRegistrationCategoryChange}
+                />
+              </div>
               <div className={`${Styles["tournament-guidlines"]}`}>
                 <a href="#">Tournament and Registration guildlines</a>
                 <img src={require("../../../assests/images/tap.gif")} />
