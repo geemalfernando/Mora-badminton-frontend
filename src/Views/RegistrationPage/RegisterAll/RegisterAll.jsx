@@ -440,9 +440,11 @@ const RegisterAll = () => {
         !isPlayingDouble && check();
         console.log("SUPUN");
       } catch (error) {
-        console.log("Error: ", error.response.data.message);
+        const apiMessage =
+          error?.response?.data?.message || error?.message || "Network error";
+        console.log("Error: ", apiMessage);
         //showConfirm("Error Loading Player !", false, error.response.data.message);
-        doneSingle = { ...doneSingle, data: error.response.data.message };
+        doneSingle = { ...doneSingle, data: apiMessage };
         !isPlayingDouble && check();
       }
     }
@@ -484,14 +486,16 @@ const RegisterAll = () => {
         })
         .catch((error) => {
           console.log("Here");
-          console.log("Error: ", error.response.data.message);
+          const apiMessage =
+            error?.response?.data?.message || error?.message || "Network error";
+          console.log("Error: ", apiMessage);
           //showConfirm("Error Loading Player !", false, error.response.data.message);
           doneDouble = {
             ...doneDouble,
             valid: false,
             validP: false,
-            data: error.response.data.message,
-            dataP: error.response.data.message,
+            data: apiMessage,
+            dataP: apiMessage,
           };
           check();
         });
