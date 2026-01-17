@@ -44,7 +44,7 @@ const HomePage = () => {
     padding: '5px 24px',
     fontSize: '18px',
     fontWeight: 'bold',
-    backgroundColor: isHovered ? '#ff6b00' : '#ff8800',
+    backgroundColor: isHovered ? '#50efe0' : '#0cd1b7',
     color: 'white',
     border: 'none',
     borderRadius: '8px',
@@ -66,7 +66,7 @@ const HomePage = () => {
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
-    backgroundColor: 'rgba(0, 0, 0, 0.4)',
+    backgroundColor: '#012326(0, 0, 0, 0.4)',
     paddingBottom: '20px',
     borderRadius: '10px',
     marginTop: '5px',
@@ -103,13 +103,10 @@ const HomePage = () => {
         <div className={styles.UMiSFContainer}>
           
           <h1>UMiSF</h1>
-          <p>
-            University of Moratuwa<br/>
-            International Shuttlers' Fest
-          </p>
+  
         </div>
           <div style={merchandiseContainerStyle}>
-          <div style={merchandiseTextStyle}>UMiSF 2025 official merchandise</div>
+          <div style={merchandiseTextStyle}>UMiSF 2026 official merchandise</div>
           <a href="https://docs.google.com/forms/d/e/1FAIpQLSfIU264eXTtGNRB1oJIxO9q-7ayQbPTZUbcuR1HUPCCwSBBcA/viewform" style={buttonURl} target="blank">
           <button 
             style={buttonStyles}

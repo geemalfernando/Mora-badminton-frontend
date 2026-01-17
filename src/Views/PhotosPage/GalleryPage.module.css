@@ -21,7 +21,7 @@
   overflow: hidden;
   font-size: 4.5vw;
   font-family: "Hind";
-  color: #0984E3;
+  color: #42e1e1;
 }
 
 @keyframes typing {
@@ -43,7 +43,7 @@
 .bottom-para p{
   font-size: 1.25vw;
   font-family: "Hind";
-  color: #83ACCB;
+  color: #e99dc5;
 }
 .gallery{
   margin-top: -10vw;

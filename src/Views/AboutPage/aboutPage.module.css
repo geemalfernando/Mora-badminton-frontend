@@ -16,7 +16,7 @@
 }
 
 .about-container h1 {
-  color: #0984e3;
+  color: #F205CB;
   font-size: 4vw;
   font-weight: bold;
   font-family: "Roboto";
@@ -43,7 +43,7 @@
 }
 .objectives-col {
   flex-basis: 31%;
-  border: 1px solid #7ba6c8;
+  border: 1px solid #eb9bce;
   background: #f1f4f6;
   text-align: justify;
   margin-bottom: 5%;
@@ -128,7 +128,7 @@
 }
 
 .testimonials h1 {
-  color: #0984E3;
+  color: #05F2DB;
   font-size: 3vw;
   font-family: "Hind";
 }
@@ -151,7 +151,7 @@
   flex-basis: 61%;
   margin-right: 1vw;
   padding: 2vw;
-  border: 1px solid #9ec1db;
+  border: 1px solid #f7baf2;
   background-color: white;
 }
 
@@ -182,13 +182,13 @@
   text-align: left;
   font-family: "Hind";
   font-size: 1vw;
-  color: #0984E3;
+  color: #05F2DB;
 }
 .testimanial-col h6 {
   /* margin-top: 15px; */
   text-align: left;
   font-size: 1vw;
-  color: #0984E3;
+  color: #05F2DB;
 }
 
 @media (max-width: 920px) {

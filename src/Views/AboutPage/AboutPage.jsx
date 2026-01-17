@@ -16,10 +16,7 @@ const AboutPage = () => {
       {/* mission vission section */}
       <section class={`${styles["objectives"]}`}>
         <p>
-          University of Moratuwa International Shuttlers’ Fest (UMISF) is the
-          annual badminton tournament organized by the badminton team of
-          University of Moratuwa in collaboration with the Division of Physical
-          Education. The tournament will be held for the 16th time in 2025, on a
+    UMISF is the annual badminton tournament organized by the MoraBadminton. The tournament will be held for the 17th time in 2026, on a
           grander scale than ever!
         </p>
         <div class={`${styles["history-row"]}`}>
@@ -75,7 +72,7 @@ const AboutPage = () => {
           <p
             style={{
               display: "inline-block",
-              color: "#0984E3",
+              color: "#D9048E",
               fontFamily: "Hind",
             }}
           >
@@ -93,7 +90,7 @@ const AboutPage = () => {
               src={require("../../assests/images/2019.jpeg")}
               alt=""
             ></img>
-            <h3>2019</h3>
+            <h3>2020</h3>
           </div>
           <div className={`${styles["past-section-col"]}`}>
             <img
@@ -101,7 +98,7 @@ const AboutPage = () => {
               src={require("../../assests/images/2020.jpeg")}
               alt=""
             ></img>
-            <h3>2020</h3>
+            <h3>2023</h3>
           </div>
           <div className={`${styles["past-section-col"]}`}>
             <img
@@ -109,7 +106,7 @@ const AboutPage = () => {
               src={require("../../assests/images/2023.jpg")}
               alt=""
             ></img>
-            <h3>2023</h3>
+            <h3>2024</h3>
           </div>
           <div className={`${styles["past-section-col"]}`}>
             <img
@@ -117,7 +114,7 @@ const AboutPage = () => {
               src={require("../../assests/images/2024.jpg")}
               alt=""
             ></img>
-            <h3>2024</h3>
+            <h3>2025</h3>
           </div>
         </div>
       </section>
@@ -141,7 +138,7 @@ const AboutPage = () => {
                 down the days for great tournament filled with lasting
                 experiences.
               </p>
-              <h3>Tharindu Ambegoda</h3>
+              <h3>Chathura Gunawardhana</h3>
               <h6>Captain</h6>
             </div>
           </div>
@@ -159,7 +156,7 @@ const AboutPage = () => {
                 participate in this tournament and take advantage of this
                 opportunity.
               </p>
-              <h3>Sahani Dissanayake</h3>
+              <h3>Thulani Jayathilake</h3>
               <h6>Captain</h6>
             </div>
           </div>
@@ -174,7 +171,7 @@ const AboutPage = () => {
               <p>
                 UMISF is not just about competition; it’s about passion, sportsmanship, and unforgettable moments on the court. Embrace the challenge, respect your opponents, and enjoy every rally. Whether you play to win or for the love of the game, this tournament is your chance to shine. Join us and make history!
               </p>
-              <h3>Vinuga Jayawardana</h3>
+              <h3>Hirun Wijerathne</h3>
               <h6>Vice Captain</h6>
             </div>
           </div>
@@ -187,7 +184,7 @@ const AboutPage = () => {
               <p>
                 UMISF is where the unexpected happens. New rivalries, new friendships, and moments that stick with you. This is your stage. Step in, play your game, and leave a mark.
               </p>
-              <h3>Kavindi Patabendige</h3>
+              <h3>Kaveesha Liyanage</h3>
               <h6>Vice Captain</h6>
             </div>
           </div>

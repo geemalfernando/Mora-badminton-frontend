@@ -66,18 +66,18 @@ function ContactUs() {
 
   const [captainMaleDetails, setCaptainMaleDetails] = useState([
     {
-      name: "Tharindu Ambegoda",
+      name: "Chathura Gunawardhana",
       tag: "Captain",
-      phone: "+94 71 175 6702",
+      phone: "+94 702138368",
       email: "tharinduambegoda2000@gmail.com",
       facebook: "https://www.facebook.com/share/191F4mKy38/",
       linkedin: "#",
       image: "captain-male.png",
     },
     {
-      name: "Vinuga Jayawardana",
+      name: "Hirun Wijerathne",
       tag: "Vice Captain",
-      phone: "+94 77 446 9602",
+      phone: "+94 770733743",
       email: "vinugajayawardana@gmail.com",
       facebook: "https://www.facebook.com/share/1EEUxVLAZn/?mibextid=wwXIfr",
       linkedin: "https://www.linkedin.com/in/vinuga-jayawardana-698759241?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
@@ -87,18 +87,18 @@ function ContactUs() {
 
   const [captainFeMaleDetails, setCaptainFemaleDetails] = useState([
     {
-      name: "Sahani Dissanayake",
+      name: "Thulani Jayathilake",
       tag: "Captain",
-      phone: "+94 76 885 4813",
+      phone: "+94 703106793",
       email: "shdissanayake23@gmail.com",
       facebook: "#",
       linkedin: "https://www.linkedin.com/in/sahani-dissanayake-202449267?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
       image: "captain-female.jpg",
     },
     {
-      name: "Kavindi Patabendige",
+      name: "Kaveesha Liyanage",
       tag: "Vice Captain",
-      phone: "+94 76 060 8150",
+      phone: "+94 719170753",
       email: "kavindipatabendige2002@gmail.com",
       facebook: "https://www.facebook.com/share/1EEfDwc8zF/",
       linkedin: "https://www.linkedin.com/in/kavindi-patabendige-650b49235?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",

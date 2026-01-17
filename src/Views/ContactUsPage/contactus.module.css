@@ -21,10 +21,11 @@
     margin-top: 15px;
     font-size: 1vw;
     font-family:'Hind';
+    background-color: #05F2DB;
 }
 
 .headerDiv{
-    background-image:linear-gradient(to right,rgba(0,0,0,0.5),rgba(9, 132, 227,0.4)),
+    background-image:linear-gradient(to right,rgba(0,0,0,0.5),#05F2DB),
                 url('../../assests/images/R.jpeg');
     color:white;
     width:100%;

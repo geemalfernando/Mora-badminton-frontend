@@ -6,7 +6,7 @@ function Gallery(props) {
   return (
     <div className={`${styles["gallery-container"]}`}>
       <div className={`${styles["gallery-title"]}`}>
-        OUR <p style={{ display: "inline-block", color: "#0984E3" }}>GALLERY</p>
+        OUR <p style={{ display: "inline-block", color: "#F205CB" }}>GALLERY</p>
       </div>
       <div className={`${styles["gallery-box"]}`}>
         <div className={`${styles["gallery-box-row"]}`}>

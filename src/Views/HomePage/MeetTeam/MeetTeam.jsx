@@ -10,8 +10,8 @@ const MeetTeam = (props) => {
           <p
             style={{
               display: "inline-block",
-              color: "#0984E3",
-              borderTop: "2px solid #0984E3",
+              color: "#05F2DB",
+              borderTop: "2px solid #05F2DB",
             }}
           >
             TEAM
